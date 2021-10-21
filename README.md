@@ -1,5 +1,6 @@
 # 2021 데이터 크리에이터 캠프
-<p align="center"><a href="http://creator.kbig.kr/"></a><img src="https://user-images.githubusercontent.com/63901494/137845544-dc611955-00f9-4f2e-8dc2-6dde2e62206c.png"><br>⏳ 2021.10.02 | 2021.10.16 | 이화여자대학교 잠자리팀 ⌛</p>
+
+<p align="center">⏳ 2021.10.02 | 2021.10.16 | 이화여자대학교 잠자리팀 ⌛<br><a href="http://creator.kbig.kr/"></a><img src="https://user-images.githubusercontent.com/63901494/137845544-dc611955-00f9-4f2e-8dc2-6dde2e62206c.png"></p>
 <br>
 
 ## Preliminary Round
