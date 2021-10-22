@@ -1,6 +1,7 @@
 # ignore directory
 서류/
 
-# ignore file
+# ignore files
+*.mp4
 *.png
 *.pptx
