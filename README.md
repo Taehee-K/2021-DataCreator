@@ -1,7 +1,6 @@
 # 2021 데이터 크리에이터 캠프
 <p align="center"> ⏳ 2021.10.02 | 2021.10.16 | 이화여자대학교 잠자리 ⌛ </p>
 <p align="center"><a href="http://creator.kbig.kr/"><img src="https://user-images.githubusercontent.com/63901494/137845544-dc611955-00f9-4f2e-8dc2-6dde2e62206c.png"></a></p>
-<br>
 
 ## Program
 * 예선/본선 각각 대회 **당일 공지된 과제를 3시간 이내에 해결하는 해커톤 방식**으로 진행되었습니다.
@@ -23,12 +22,26 @@
 
 <!--
 ### Data
+[AI-Hub 문서요약 텍스트](https://aihub.or.kr/aidata/8054)
 
 ### Model
 
 ### Result
+-->
 
-## Contributor
+<!--
+## Reference 
+* [SKTBrain/Kobert](https://github.com/SKTBrain/KoBERT)
+
+## Members
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Taehee-K"><img src="https://user-images.githubusercontent.com/63901494/129619988-1a959834-313c-443c-84c2-4fc2db8ef8f6.jpg" width="100" height="100"><br /><sub><b>김태희</b></sub></td>
+    <td align="center"><a href="https://github.com/SK-jeong"><img src="https://user-images.githubusercontent.com/63901494/129582209-1d1d194e-cf3e-48d6-b097-35a7b855a683.jpg" width="100" height="100"><br /><sub><b>정성경</b></sub></td>
+    <td align="center"><a href="https://github.com/jyjy318"><img src="https://user-images.githubusercontent.com/63901494/139084437-17d8f084-ee9c-4d20-b52a-e71f57a48991.png" width="100" height="100"><br /><sub><b>문지예</b></sub></td>
+    <td align="center"><a href="https://github.com/YuKyeong97"><img src="https://user-images.githubusercontent.com/63901494/139084338-c1ff0768-8258-49d0-9628-66943e958814.png" width="100" height="100"><br /><sub><b>한유경</b></sub></td>
+  </tr>
+</table>
 
 ## Structure
 -->
