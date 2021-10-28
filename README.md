@@ -10,11 +10,29 @@
 서울시에서 2015년 부터 시행한 무인 공공자전거 대여 서비스 "따릉이"는 해가 지날수록 이용하는 시민이 늘어나는 추세입니다. 하지만 2020년 9월 서울환경연합에서 진행한 '[자전거 이용에 관한 설문조사](http://ecoseoul.or.kr/archives/41430)'에 따르면 조사 대상 2,700명 중 27%의 응답자들이 따릉이 이용 시 가장 불편한 점으로 대여시 따릉이가 부족한 점을 지적하였다고 합니다. 이를 해소하기 위해 2019년 06월 부터 2020년 12월 까지의 날씨와 따릉이 이용량 정보를 활용하여 각 날짜에 해당하는 대여량 예측을 진행하였습니다. 
 
 <!--
-### Data
-
 ### Model
+* LinearRegressor
+* XGBoostRegressor
+* LightGBMRegressor
+  
+### Optimization
+* LightGBM
+* Hyperparameter tuning - using optuna framework
+  ```
+  'colsample_bytree': 0.4,
+  'learning_rate': 0.08,
+  'max_depth': 5,
+  'min_child_samples': 114,
+  'num_leaves': 204,
+  'reg_alpha': 0.0010251805749509925,
+  'reg_lambda': 0.2671750951630589,
+  'subsample': 1.0
+  ```
+* 10-Fold cross validation
 
 ### Result
+R2 Score: 0.81940<br>
+<img src="https://user-images.githubusercontent.com/63901494/139278440-acda6362-3f85-4991-9540-bc4c905c6021.png" width="300" height="300">
 -->
 
 ## Final Round
@@ -25,13 +43,20 @@
 [AI-Hub 문서요약 텍스트](https://aihub.or.kr/aidata/8054)
 
 ### Model
+* LSTM
+* GRU
+* KoBERT
+
+# Optimization
+* Dropout 추가
+* Weight Decay 적용
 
 ### Result
--->
 
-<!--
 ## Reference 
 * [SKTBrain/Kobert](https://github.com/SKTBrain/KoBERT)
+-->
+
 
 ## Members
 <table>
@@ -43,5 +68,6 @@
   </tr>
 </table>
 
+<!--
 ## Structure
 -->
