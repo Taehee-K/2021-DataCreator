@@ -9,15 +9,18 @@
 ## Preliminary Round
 서울시에서 2015년 부터 시행한 무인 공공자전거 대여 서비스 "따릉이"는 해가 지날수록 이용하는 시민이 늘어나는 추세입니다. 하지만 2020년 9월 서울환경연합에서 진행한 '[자전거 이용에 관한 설문조사](http://ecoseoul.or.kr/archives/41430)'에 따르면 조사 대상 2,700명 중 27%의 응답자들이 따릉이 이용 시 가장 불편한 점으로 대여시 따릉이가 부족한 점을 지적하였다고 합니다. 이를 해소하기 위해 2019년 06월 부터 2020년 12월 까지의 날씨와 따릉이 이용량 정보를 활용하여 각 날짜에 해당하는 대여량 예측을 진행하였습니다. 
 
-<!--
+### Data
+// EDA 집어넣기
+
 ### Model
 * LinearRegressor
 * XGBoostRegressor
 * LightGBMRegressor
+
+Baseline 모델의 R2Score 및 연산 비용을 고려해 LightGBM을 최종 모델로 선택하였습니다.
   
 ### Optimization
-* LightGBM
-* Hyperparameter tuning - using optuna framework
+* LightGBM Hyperparameter Tuning (Optuna 프레임워크 사용)
   ```
   'colsample_bytree': 0.4,
   'learning_rate': 0.08,
@@ -28,40 +31,70 @@
   'reg_lambda': 0.2671750951630589,
   'subsample': 1.0
   ```
-* 10-Fold cross validation
+* 10-Fold Cross Validation
 
 ### Result
-R2 Score: 0.81940<br>
-<img src="https://user-images.githubusercontent.com/63901494/139278440-acda6362-3f85-4991-9540-bc4c905c6021.png" width="300" height="300">
--->
+|  | Linear | LightGBM | XGBoost | LightGBM Optimized |
+| :-: | :-: | :-: | :-: | :-: |
+| R2Score | 0.39522 | 0.67232 | 0.69045 | **0.81940** |
+| Plot | <img src="https://user-images.githubusercontent.com/63901494/139447416-f6e21634-2449-499f-94f7-cefc62a334a5.png" width="130"> | <img src="https://user-images.githubusercontent.com/63901494/139447698-e906644a-b67a-4969-86ff-d67c72e8d3ff.png" width="130"> | <img src="https://user-images.githubusercontent.com/63901494/139447625-807211f7-ff03-4774-ab7a-79e6dbe311c7.png" width="130"> | <img src="https://user-images.githubusercontent.com/63901494/139278440-acda6362-3f85-4991-9540-bc4c905c6021.png" width="130"> |
+
+>예선 대회 Kaggle 리더보드 1위
 
 ## Final Round
 주어진 뉴스 데이터의 내용/제목들로부터 특징들을 추출 후, 이를 기반으로 뉴스를 주제별로 분류하였습니다.
-
 <!--
 ### Data
-[AI-Hub 문서요약 텍스트](https://aihub.or.kr/aidata/8054)
+* 총 6개 카테고리별 각각 4500 개의 뉴스들로 데이터의 균등한 분포 확인
+* [AI-Hub 문서요약 텍스트](https://aihub.or.kr/aidata/8054)를 참조하여 각 클래스 별 카테고리 추정<br>0: 문화, 1: IT/과학, 2: 경제, 3: 사회, 4: 스포츠, 5: 정치
+  | Title | Abstract |
+  | :-: | :-: |
+  | <img src="https://user-images.githubusercontent.com/63901494/139452999-1c083dfd-9af4-49cb-b261-c45ad3799c6a.png" width="300"> | <img src="https://user-images.githubusercontent.com/63901494/139453328-d1f43b35-9607-4959-9378-3137a76b0a1d.png" width="300"> |
+
+### Preprocessing
+* Komoran 형태소 분석기를 활용해 텍스트 데이터의 형태소 분석 및 품사 태깅
+* 의미 파악에 불필요하다고 판단한 조사, 선어말어미, 연결어미, 전성어미, 접미사 등의 불용어 제거
+* TF-IDF 알고리즘으로 텍스트 벡터화
 
 ### Model
 * LSTM
 * GRU
 * KoBERT
 
-# Optimization
+### Optimization
+* Finetune KoBERT
 * Dropout 추가
 * Weight Decay 적용
 
 ### Result
+<table>
+<tr><td align="center">제목 데이터</td><td align="center">요약 데이터</td></tr>
+<tr><td>
+
+|  | LSTM | GRU | KoBERT |
+| :-: | :-: | :-: | :-: |
+| F1-Score |  |  | **0.64** |
+| Accuracy |  |  | **0.65** |
+
+</td><td>
+
+|  | LSTM | GRU | 
+| :-: | :-: | :-: |
+| F1-Score |  |  |
+| Accuracy |  |  |
+
+</td></tr>
+</table>
+
+>본선 대회 Kaggle 리더보드 1위
 
 ## Reference 
 * [SKTBrain/Kobert](https://github.com/SKTBrain/KoBERT)
 -->
-
-
 ## Members
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Taehee-K"><img src="https://user-images.githubusercontent.com/63901494/129619988-1a959834-313c-443c-84c2-4fc2db8ef8f6.jpg" width="100" height="100"><br /><sub><b>김태희</b></sub></td>
+    <td align="center"><a href="https://github.com/Taehee-K"><img src="https://user-images.githubusercontent.com/63901494/139446853-32606da5-5534-4e9d-a6fd-6b610c61bbde.jpg" width="100" height="100"><br /><sub><b>김태희</b></sub></td>
     <td align="center"><a href="https://github.com/SK-jeong"><img src="https://user-images.githubusercontent.com/63901494/129582209-1d1d194e-cf3e-48d6-b097-35a7b855a683.jpg" width="100" height="100"><br /><sub><b>정성경</b></sub></td>
     <td align="center"><a href="https://github.com/jyjy318"><img src="https://user-images.githubusercontent.com/63901494/139084437-17d8f084-ee9c-4d20-b52a-e71f57a48991.png" width="100" height="100"><br /><sub><b>문지예</b></sub></td>
     <td align="center"><a href="https://github.com/YuKyeong97"><img src="https://user-images.githubusercontent.com/63901494/139084338-c1ff0768-8258-49d0-9628-66943e958814.png" width="100" height="100"><br /><sub><b>한유경</b></sub></td>
