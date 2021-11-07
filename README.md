@@ -10,7 +10,27 @@
 서울시에서 2015년 부터 시행한 무인 공공자전거 대여 서비스 "따릉이"는 해가 지날수록 이용하는 시민이 늘어나는 추세입니다. 하지만 2020년 9월 서울환경연합에서 진행한 '[자전거 이용에 관한 설문조사](http://ecoseoul.or.kr/archives/41430)'에 따르면 조사 대상 2,700명 중 27%의 응답자들이 따릉이 이용 시 가장 불편한 점으로 대여시 따릉이가 부족한 점을 지적하였다고 합니다. 이를 해소하기 위해 2019년 06월 부터 2020년 12월 까지의 날씨와 따릉이 이용량 정보를 활용하여 각 날짜에 해당하는 대여량 예측을 진행하였습니다. 
 
 ### Data
-// EDA 집어넣기
+* 결측치 확인<br>
+  <img src="https://user-images.githubusercontent.com/63901494/140647241-21a2df94-1ec9-40c3-9528-64daecb74a99.png" width="500">
+  * `Temperature`와 `Windspeed`, `Dewpoint`에 소량의 결측치 존재
+  * `Rainfall`과 `Snow`에 대량의 결측치 존재
+* 날짜별 EDA<br>
+  * 연도별, 월별 분석<br>
+    <img src="https://user-images.githubusercontent.com/63901494/140647546-3b1a1bea-62d3-4d3f-901d-a4151c67547a.png" width="600">
+    * 19년도보다는 20년도에 대여량이 높다
+    * 상대적으로 따뜻한 4월~10월 까지의 대여량이 높다
+  * 요일별 분석 <br>
+    <img src="https://user-images.githubusercontent.com/63901494/140647739-0430c856-7582-43a5-918a-59207ca1876e.png" width="600">
+    * 주중/주말 여부에 따라 대여량 추이가 다르다
+    * 주중(0~4)에는 출퇴근 시간대의 대여량이 높다
+    * 주말(5~5)에는 낮-오후 시간대의 대여량이 높다
+
+## Preprocessing
+* 결측치 처리
+  * `Temperature`, `Windspeed`, `Dewpoint` 데이터의 경우 nearest interpolation 기법을 사용
+  * `Rainfall`, `Snow`의 경우 0으로 결측치 대체
+* 연도, 월, 요일 정보를 담은 `Year`, `Month`, `Weekday` 변수 생성
+* Standard Scaling 진행
 
 ### Model
 * LinearRegressor
