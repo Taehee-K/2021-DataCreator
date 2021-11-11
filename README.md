@@ -11,7 +11,7 @@
 
 ### Data
 * 결측치 확인<br>
-  <img src="https://user-images.githubusercontent.com/63901494/140647241-21a2df94-1ec9-40c3-9528-64daecb74a99.png" width="500">
+  <img src="https://user-images.githubusercontent.com/63901494/140647241-21a2df94-1ec9-40c3-9528-64daecb74a99.png" width="600">
   * `Temperature`와 `Windspeed`, `Dewpoint`에 소량의 결측치 존재
   * `Rainfall`과 `Snow`에 대량의 결측치 존재
 * 날짜별 EDA<br>
@@ -63,10 +63,11 @@ Baseline 모델의 R2Score 및 연산 비용을 고려해 LightGBM을 최종 모
 
 ## Final Round
 주어진 뉴스 데이터의 내용/제목들로부터 특징들을 추출 후, 이를 기반으로 뉴스를 주제별로 분류하였습니다.
-<!--
+
 ### Data
 * 총 6개 카테고리별 각각 4500 개의 뉴스들로 데이터의 균등한 분포 확인
-* [AI-Hub 문서요약 텍스트](https://aihub.or.kr/aidata/8054)를 참조하여 각 클래스 별 카테고리 추정<br>0: 문화, 1: IT/과학, 2: 경제, 3: 사회, 4: 스포츠, 5: 정치
+* [AI-Hub 문서요약 텍스트](https://aihub.or.kr/aidata/8054)를 참조하여 각 클래스 별 카테고리 추정<br>0 : 문화, 1: IT/과학, 2: 경제, 3: 사회, 4: 스포츠, 5: 정치
+* 제목/요약 텍스트의 각 클래스별 명사 빈도수 기반 Word Cloud
   | Title | Abstract |
   | :-: | :-: |
   | <img src="https://user-images.githubusercontent.com/63901494/139452999-1c083dfd-9af4-49cb-b261-c45ad3799c6a.png" width="300"> | <img src="https://user-images.githubusercontent.com/63901494/139453328-d1f43b35-9607-4959-9378-3137a76b0a1d.png" width="300"> |
@@ -93,15 +94,15 @@ Baseline 모델의 R2Score 및 연산 비용을 고려해 LightGBM을 최종 모
 
 |  | LSTM | GRU | KoBERT |
 | :-: | :-: | :-: | :-: |
-| F1-Score |  |  | **0.64** |
-| Accuracy |  |  | **0.65** |
+| F1-Score | - | - | **0.64** |
+| Accuracy | 0.55 | 0.56 | **0.65** |
 
 </td><td>
 
 |  | LSTM | GRU | 
 | :-: | :-: | :-: |
-| F1-Score |  |  |
-| Accuracy |  |  |
+| F1-Score | - | - |
+| Accuracy | 0.56 | 0.56 |
 
 </td></tr>
 </table>
@@ -110,7 +111,7 @@ Baseline 모델의 R2Score 및 연산 비용을 고려해 LightGBM을 최종 모
 
 ## Reference 
 * [SKTBrain/Kobert](https://github.com/SKTBrain/KoBERT)
--->
+
 ## Members
 <table>
   <tr>
