@@ -2,7 +2,10 @@
 서류/
 
 # ignore files
+*.csv
 *.mp4
 *.png
 *.pdf
 *.pptx
+final/baseline.ipynb
+preliminary/211002 데이터 크리에이터 캠프 제8회 예선.ipynb
