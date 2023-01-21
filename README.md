@@ -115,7 +115,7 @@ Baseline 모델의 R2Score 및 연산 비용을 고려해 LightGBM을 최종 모
 ## Members
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Taehee-K"><img src="https://user-images.githubusercontent.com/63901494/139446853-32606da5-5534-4e9d-a6fd-6b610c61bbde.jpg" width="100" height="100"><br /><sub><b>김태희</b></sub></td>
+    <td align="center"><a href="https://github.com/treblenalto"><img src="https://user-images.githubusercontent.com/63901494/139446853-32606da5-5534-4e9d-a6fd-6b610c61bbde.jpg" width="100" height="100"><br /><sub><b>김태희</b></sub></td>
     <td align="center"><a href="https://github.com/SK-jeong"><img src="https://user-images.githubusercontent.com/63901494/129582209-1d1d194e-cf3e-48d6-b097-35a7b855a683.jpg" width="100" height="100"><br /><sub><b>정성경</b></sub></td>
     <td align="center"><a href="https://github.com/jyjy318"><img src="https://user-images.githubusercontent.com/63901494/139084437-17d8f084-ee9c-4d20-b52a-e71f57a48991.png" width="100" height="100"><br /><sub><b>문지예</b></sub></td>
     <td align="center"><a href="https://github.com/YuKyeong97"><img src="https://user-images.githubusercontent.com/63901494/139084338-c1ff0768-8258-49d0-9628-66943e958814.png" width="100" height="100"><br /><sub><b>한유경</b></sub></td>
